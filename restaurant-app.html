@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Restaurant Application</title>
+        <link rel="stylesheet" href="restaurant-app.css">
+        <link rel="stylesheet" href="modal.css">
+    </head>
+    <body>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <table class="table-main">
+                    <thead>
+                        <tr>
+                            <th>Item Name</th>
+                            <th>Total Items</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body">
+                    </tbody>
+                </table>
+                <div>
+                    <p>Total: <span class="table-total"></span>
+                        <button class="check-out">Check Out</button>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="main">
+            <div class="main-items drawer">
+                <h1>Tables</h1>
+                <input type="text" name="search-table" placeholder="Search Table" onkeyup="searchTable();">
+                <div class="table1 tables" id="table1" ondragover="event.preventDefault();" ondrop="drop(event);">
+                    <h2>Table 1</h2>
+                    <p>Total: <span class="total-price"></span></p>
+                    <p>Items: <span class="total-items"></span></p>
+                </div>
+                <div class="table2 tables" id="table2" ondragover="event.preventDefault();" ondrop="drop(event);">
+                    <h2>Table 2</h2>
+                    <p>Total: <span class="total-price"></span></p>
+                    <p>Items: <span class="total-items"></span></p>
+                </div>
+                <div class="table3 tables" id="table3" ondragover="event.preventDefault();" ondrop="drop(event);">
+                    <h2>Table 3</h2>
+                    <p>Total: <span class="total-price"></span></p>
+                    <p>Items: <span class="total-items"></span></p>
+                </div>
+                <div class="table4 tables" id="table4" ondragover="event.preventDefault();" ondrop="drop(event);">
+                    <h2>Table 4</h2>
+                    <p>Total: <span class="total-price"></span></p>
+                    <p>Items: <span class="total-items"></span></p>
+                </div>
+            </div>
+            <div class="main-items menu">
+                <h1 class="title">SD</h1>
+                <h1>Menu</h1>
+                <input type="text" name="search" placeholder="Search" onkeyup="searchMenu()">
+                <div class="menu-content">
+                </div>
+            </div>
+        </div>
+        <script src="restaurant-app.js"></script>
+        <script src="modal.js"></script>
+    </body>
+</html>
